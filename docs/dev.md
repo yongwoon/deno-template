@@ -6,4 +6,10 @@
 docker-compose build --no-cache
 ```
 
-- Create project
+- Run Fresh if you use
+
+```bash
+docker-compose up
+docker-compose exec app bash
+deno task start
+```
