@@ -13,6 +13,7 @@ services:
     working_dir: "/var/www/app"
     # ports:
     #   - "8080:8080"
+    stdin_open: true
     tty: true
     networks:
       - dev_deno_template_network
