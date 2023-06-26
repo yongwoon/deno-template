@@ -1,0 +1,21 @@
+version: "3"
+services:
+  app:
+    container_name: dev_deno_template
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    # environment:
+    #   PAWSSWORD: "development"
+    # command: npm run dev -- --port 8080 --host 0.0.0.0
+    volumes:
+      - .:/var/www/app
+    working_dir: "/var/www/app"
+    # ports:
+    #   - "8080:8080"
+    tty: true
+    networks:
+      - dev_deno_template_network
+
+networks:
+  dev_deno_template_network:
